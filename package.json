@@ -1,0 +1,25 @@
+{
+  "name": "electron-quark",
+  "version": "1.0.0",
+  "description": "Backend http web server for electron",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lawrencezahner/quark.git"
+  },
+  "keywords": [
+    "electron",
+    "http",
+    "server"
+  ],
+  "author": "lawrencezahner",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lawrencezahner/quark/issues"
+  },
+  "homepage": "https://github.com/lawrencezahner/quark#readme"
+}
