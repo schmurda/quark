@@ -5,14 +5,13 @@ const fs = require('fs');
 const mime = require('mime');
 
 function log(data) {
-    console.log(`=== Quark Server\t[${process.env.QUARK_DESC}]:\t${data}\b`);
+    if (process.env.QUARK_LOG) {
+        console.log(`=== Quark Server\t[${process.env.QUARK_DESC}]:\t${data}\b`);
+    }
 }
 
 const server = http.createServer(function (req, res) {
-    if (process.env.QUARK_LOG) {
-        log(`${req.method} ${req.url}`);
-    }
-
+    log(`${req.method} ${req.url}`);
 
     var purl = url.parse(req.url);
     var pathname = path.join(process.env.QUARK_DIR, purl.pathname);
