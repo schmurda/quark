@@ -9,10 +9,10 @@ var quark = function (opts) {
         console.log('Creating server');
         server = spawn('node', [path.join(__dirname, 'server')], {
             env: {
-                QUARK_PORT: opts.port,
-                QUARK_DIR: opts.dir,
-                QUARK_DESC: opts.description,
-                QUARK_LOG: opts.log
+                QUARK_PORT: opts.port || 21048,
+                QUARK_DIR: opts.dir || __dirname,
+                QUARK_DESC: opts.description || 'default',
+                QUARK_LOG: opts.log || false
             }
         });
 
