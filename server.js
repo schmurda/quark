@@ -9,7 +9,10 @@ function log(data) {
 }
 
 const server = http.createServer(function (req, res) {
-    log(`${req.method} ${req.url}`);
+    if (process.env.QUARK_LOG) {
+        log(`${req.method} ${req.url}`);
+    }
+
 
     var purl = url.parse(req.url);
     var pathname = path.join(process.env.QUARK_DIR, purl.pathname);

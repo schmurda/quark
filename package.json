@@ -1,6 +1,6 @@
 {
   "name": "electron-quark",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Backend http web server for electron",
   "main": "index.js",
   "scripts": {
@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/lawrencezahner/quark/issues"
   },
-  "homepage": "https://github.com/lawrencezahner/quark#readme"
+  "homepage": "https://github.com/lawrencezahner/quark#readme",
+  "dependencies": {
+    "mime": "^2.2.0"
+  }
 }
